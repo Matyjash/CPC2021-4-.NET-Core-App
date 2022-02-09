@@ -1,0 +1,28 @@
+﻿<!--Menu restauracji-->
+
+@model List<MaciejLendzionLab4ZadDom.Models.MealViewModel>
+
+@foreach (var Meal in Model)
+            {
+                <div>
+
+                    <h3>
+                        @Meal.MealName
+                    </h3>
+                    <h4>
+                        Składniki:
+                        @Meal.Ingredients
+                    </h4>
+                    <h4>
+                        Opis:
+                        @Meal.Description
+                    </h4>
+                    <h4>
+                        Cena:
+                        @Meal.Price zł
+                    </h4>
+                    <img src="~/@Url.Content(Meal.Photo)" alt="@Meal.MealName" />
+                    <hr/>
+
+                </div>
+            }

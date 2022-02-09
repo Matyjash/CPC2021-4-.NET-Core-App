@@ -1,0 +1,49 @@
+﻿
+@model MaciejLendzionLab4ZadDom.Models.OrderViewModel
+
+@using (Html.BeginForm("Order", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <!---Listy z wyborem dań/napojow/dodatkow-->
+    <div class="rate-background">
+        <h6>Danie główne</h6>
+        <select name="Danie">
+            <option value="">Wybierz danie</option>
+            <option value="1">Knysza</option>
+            <option value="2">Pita</option>
+            <option value="3">Pizza turecka</option>
+        </select>
+    </div>
+    <!--Lista z wyborem dania-->
+    <div class="white-space"></div>
+    <div class="rate-background">
+        <h6>Napój</h6>
+        <select name="Napój">
+            <option value="">Wybierz napój</option>
+            <option value="1">Cola</option>
+            <option value="2">Woda</option>
+            <option value="3">Sok jabłkowy</option>
+        </select>
+    </div>
+    <div class="white-space"></div>
+    <!--Lista z wyborem dodatku-->
+    <div class="rate-background">
+        <h6>Dodatek</h6>
+        <select name="Dodatek">
+            <option value="">Wybierz dodatek</option>
+            <option value="1">Frytki</option>
+            <option value="2">Sałataka</option>
+            <option value="3">Dodatkowy sos</option>
+        </select>
+    </div>
+    <!--Przycisk wyslania zamówienia-->
+    <div class="white-space"></div>
+    <div class="white-space-small">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" volume="Wyślij" class="btn btn-success" />
+                </div">
+            </div>
+        </div>
+    }

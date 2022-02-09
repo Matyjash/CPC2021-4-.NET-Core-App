@@ -1,0 +1,28 @@
+﻿@model List<MaciejLendzionLab4ZadDom.Models.RateViewModel>
+
+<div>
+    <h2>Opinie:</h2>
+</div>
+
+<div class="white-space"></div>
+
+@foreach (var Rate in Model)
+{
+    <div class="rate-background">
+
+        <h6>
+            @Rate.Name:
+        </h6>
+        <h7>
+            @Rate.Opinion
+        </h7>
+    </div>
+    <div class="white-space"></div>
+}
+
+<div>
+    <button>
+        @Html.ActionLink("Wystaw opinię!", "CreateRate", "Home")
+    </button>
+</div>
+
